@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use \CodeDelivery\Models\User;
 use \CodeDelivery\Models\Client;
+use \CodeDelivery\Models\OauthClient;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -34,6 +35,16 @@ class DatabaseSeeder extends Seeder
                 'remember_token' => str_random(10),
             ]
         )->client()->save(factory(Client::class)->make());
+		
+		  factory(OauthClient::class)->create(
+		   [
+                'name' => 'Minha App Mobile',
+                'id' => 'appid01',
+                'secret' => 'secret',
+                
+            ]
+        );
+		
         $this->call(UserTableSeeder::class);
         $this->call(OrderTableSeeder::class);
         $this->call(CategoryTableSeeder::class);

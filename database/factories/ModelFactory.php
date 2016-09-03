@@ -67,3 +67,10 @@ $factory->define(\CodeDelivery\Models\Cupom::class, function (Faker\Generator $f
         
     ];
 });
+$factory->define(\CodeDelivery\Models\OauthClient::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word,
+		'id' => $faker->word,
+		'secret'=>$faker->word
+    ];
+});
