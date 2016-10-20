@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+		Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -143,7 +144,8 @@ return [
         CodeDelivery\Providers\AppServiceProvider::class,
         CodeDelivery\Providers\AuthServiceProvider::class,
         CodeDelivery\Providers\EventServiceProvider::class,
-        CodeDelivery\Providers\RouteServiceProvider::class, CodeDelivery\Providers\RepositoryServiceProvider::class, Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        CodeDelivery\Providers\RouteServiceProvider::class, CodeDelivery\Providers\RepositoryServiceProvider::class, 
+		Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Bestmomo\Scafold\ScafoldServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 		LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
